@@ -20,11 +20,6 @@ const Navigation = ({ field, setField }: TNavigationProps) => {
         return currentIndex;
       }
 
-      //circle scroll
-      /*  if (FIELDS.indexOf(field) + step < 0) {
-        return FIELDS.length - 1;
-      } */
-
       return FIELDS.indexOf(field) + step;
     };
 
