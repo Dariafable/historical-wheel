@@ -1,0 +1,12 @@
+.navigation__carousel {
+  width: 530px;
+  height: 530px;
+  border: 1px solid rgba(#42567a, 0.2);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  top: 44.5%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

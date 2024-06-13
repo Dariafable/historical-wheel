@@ -1,0 +1,76 @@
+.swiper__wrapper {
+  position: relative;
+  padding: 80px;
+  height: 300px;
+  cursor: pointer;
+}
+
+.swiper__button {
+  z-index: 1;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  position: absolute;
+  left: 20px;
+  top: 42%;
+  cursor: pointer;
+  box-shadow: 0px 0px 15px rgba(56, 119, 238, 0.3);
+  border: none;
+  background: transparent;
+
+  &::before,
+  &::after {
+    content: "";
+    background-color: #3877ee;
+    width: 10px;
+    height: 2px;
+    position: absolute;
+    left: 50%;
+  }
+
+  &::before {
+    top: 40%;
+    transform: translate(-70%, 50%) rotate(-45deg);
+  }
+
+  &::after {
+    top: 60%;
+    transform: translate(-70%, -60%) rotate(45deg);
+  }
+
+  &.next {
+    left: unset;
+    right: 20px;
+
+    &::before {
+      transform: translate(-50%, 50%) rotate(45deg);
+    }
+
+    &::after {
+      transform: translate(-50%, -60%) rotate(-45deg);
+    }
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  .swiper__wrapper {
+    padding-top: 160px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .swiper {
+    width: 100%;
+    height: auto;
+    flex-grow: 1;
+  }
+
+  .swiper__wrapper {
+    padding: 0;
+    height: 200px;
+  }
+
+  .swiper__button {
+    display: none;
+  }
+}

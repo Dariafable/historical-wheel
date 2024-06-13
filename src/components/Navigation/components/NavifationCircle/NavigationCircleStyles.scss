@@ -1,0 +1,71 @@
+.navigation__circle {
+  position: absolute;
+  transform-origin: center 265px;
+}
+
+.circle__wrapper {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translateY(-50%);
+  position: relative;
+  z-index: 1;
+}
+
+.circle__title {
+  opacity: 0;
+  position: absolute;
+  left: 70px;
+  font-weight: 700;
+  line-height: 30px;
+  transition: opacity 0.3s ease;
+  color: #42567a;
+}
+
+.circle {
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+
+  width: 6px;
+  height: 6px;
+  background-color: #42567a;
+  transition: all 0.6s;
+
+  .circle__number {
+    opacity: 0;
+    font-size: 20px;
+    transition: all 0.3s;
+  }
+
+  &:hover {
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    border: 1px solid rgba(#42567a, 0.2);
+    transition: width 0.5s, height 0.5s, background-color 0.5s;
+
+    .circle__number {
+      opacity: 1;
+    }
+  }
+
+  &.active {
+    width: 56px;
+    height: 56px;
+    border: 1px solid rgba(#42567a, 0.2);
+    background-color: white;
+
+    .circle__title {
+      opacity: 1;
+    }
+
+    .circle__number {
+      opacity: 1;
+    }
+  }
+}

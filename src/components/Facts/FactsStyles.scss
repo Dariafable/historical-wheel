@@ -1,0 +1,15 @@
+.facts {
+  margin-top: 0;
+  margin-bottom: 0;
+
+  &__hr {
+    display: block;
+    border: 0.5px solid #c7cdd9;
+    margin-bottom: 20px;
+  }
+
+  @media screen and (max-width: 1024px) {
+    margin-top: 200px;
+    margin-bottom: 90px;
+  }
+}

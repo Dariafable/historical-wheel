@@ -1,0 +1,19 @@
+.swiper__slide {
+  width: 29%;
+  margin-left: 0;
+}
+
+@media screen and (max-width: 1024px) {
+  .swiper__slide {
+    width: 60%;
+    height: auto;
+  }
+
+  .pagination {
+    justify-content: center;
+    display: flex;
+    gap: 10px;
+    bottom: 30px;
+    position: fixed;
+  }
+}
